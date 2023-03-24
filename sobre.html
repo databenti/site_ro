@@ -17,9 +17,35 @@
     <title>Rosa Bento Florista</title>
 
     <style>
+        @media (max-width: 767px) {
+            .header-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                /* overflow: hidden; */
+                /* Adicione essa linha */
+                max-width: 120px;
+                margin: 0 auto;
+                /* para centralizar a div horizontalmente */
+            }
+
+            .header-image img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+
+
         .navbar-brand {
             font-family: 'Style Script', sans-serif;
             font-size: 2.2rem;
+        }
+
+        .navbar-brand img {
+            max-height: 80px;
         }
 
         .navbar-toggler {
@@ -70,42 +96,23 @@
             background-color: #C0392B !important;
         }
 
-        .ripple-surface {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            vertical-align: bottom;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .bg-image {
-            position: relative;
-            overflow: hidden;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50%;
-        }
-
-        .shadow-2-strong {
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .25), 0 5px 15px 2px rgba(0, 0, 0, .2) !important;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .25), 0 5px 15px 2px rgba(0, 0, 0, .2) !important;
-        }
-
-        .mask {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            background-attachment: fixed;
         }
 
-        .hover-overlay .mask {
-            opacity: 0;
-            -webkit-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+        .header-image img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 
@@ -115,8 +122,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-               <!-- <a class="navbar-brand font-weight-bold text-white" href="/">Rosa Bento Florista</a> -->
-               <a class="navbar-brand" href="/"><img src="/public/logo.png" alt="Nome da sua empresa"></a>
+                <!-- <a class="navbar-brand font-weight-bold text-white" href="/">Rosa Bento Florista</a> -->
+                <a class="navbar-brand" href="/"><img src="/public/logo.png" alt="Nome da sua empresa"></a>
+                <div class="header-image"><img src="/public/logo2.png" alt="Nova imagem"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -151,16 +159,30 @@
                         </div>
                     </div>
                     <div class="col-md-6 gx-5 mb-4">
-                        <h4><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oi eu sou a Rosa Bento</font></font></strong></h4>
-                          <font style="vertical-align: inherit;">
-                            Rosa Bento é uma florista dedicada que tem se especializado em arranjos florais desidratados desde 2018. Para aqueles que não estão familiarizados com esse tipo de arranjo, flores e folhagens desidratadas são plantas que foram desidratadas e preservadas para durarem por muito tempo. Isso significa que seus arranjos são perfeitos para quem quer decorar um espaço ou presentear alguém com algo que dure mais do que alguns dias.
+                        <h4><strong>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Oi eu sou a Rosa Bento</font>
+                                </font>
+                            </strong></h4>
+                        <font style="vertical-align: inherit;">
+                            Rosa Bento é uma florista dedicada que tem se especializado em arranjos florais desidratados
+                            desde 2018. Para aqueles que não estão familiarizados com esse tipo de arranjo, flores e
+                            folhagens desidratadas são plantas que foram desidratadas e preservadas para durarem por
+                            muito tempo. Isso significa que seus arranjos são perfeitos para quem quer decorar um espaço
+                            ou presentear alguém com algo que dure mais do que alguns dias.
 
-Rosa tem uma paixão pela arte de criar arranjos florais únicos e deslumbrantes. Seu trabalho tem um toque artístico que é incomparável. Ela é capaz de transformar qualquer espaço em um ambiente bonito e acolhedor, com seus arranjos florais desidratados.
+                            Rosa tem uma paixão pela arte de criar arranjos florais únicos e deslumbrantes. Seu trabalho
+                            tem um toque artístico que é incomparável. Ela é capaz de transformar qualquer espaço em um
+                            ambiente bonito e acolhedor, com seus arranjos florais desidratados.
 
-Se você está procurando um presente especial ou quer dar um toque especial à sua casa ou escritório, confira o site da Rosa Bento Florista. Tenho certeza que você irá se encantar com sua arte! Obrigado por visitar o site da Rosa Bento Florista!
-                        </font></font></p>
-                        
-                      </div>
+                            Se você está procurando um presente especial ou quer dar um toque especial à sua casa ou
+                            escritório, confira o site da Rosa Bento Florista. Tenho certeza que você irá se encantar
+                            com sua arte! Obrigado por visitar o site da Rosa Bento Florista!
+                        </font>
+                        </font>
+                        </p>
+
+                    </div>
                 </div>
             </section>
         </div>
@@ -178,9 +200,9 @@ Se você está procurando um presente especial ou quer dar um toque especial à 
                 <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://instagram.com/sucullentaria"
                     role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
 
-                    <!-- Instagram -->
+                <!-- Instagram -->
                 <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://wa.me/c/5511999279294"
-                role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
             </section>
             <!-- Section: Social media -->
         </div>

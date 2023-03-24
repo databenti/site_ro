@@ -17,9 +17,35 @@
   <title>Rosa Bento Florista</title>
 
   <style>
+    @media (max-width: 767px) {
+      .header-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* overflow: hidden; */
+        /* Adicione essa linha */
+        max-width: 120px;
+        margin: 0 auto;
+        /* para centralizar a div horizontalmente */
+      }
+
+      .header-image img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+
+
     .navbar-brand {
       font-family: 'Style Script', sans-serif;
       font-size: 2.2rem;
+    }
+
+    .navbar-brand img {
+      max-height: 80px;
     }
 
     .navbar-toggler {
@@ -69,6 +95,25 @@
     .custom-bg:active {
       background-color: #C0392B !important;
     }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-image img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   </style>
 
 </head>
@@ -76,9 +121,9 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-       <!-- <-a class="navbar-brand font-weight-bold text-white" href="/">Rosa Bento Florista</a> --->
-        <a class="navbar-brand" href="/"><img src="/public/logo2.png" alt="Nome da sua empresa"></a>
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="/"><img src="/public/logo.png" alt="Nome da sua empresa"></a>
+        <div class="header-image"><img src="/public/logo2.png" alt="Nova imagem"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -99,6 +144,7 @@
       </div>
     </nav>
   </header>
+
   <div class="container mt-5">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
@@ -128,21 +174,27 @@
         <div class="card text-center">
           <img src="/public/card4.png" alt="Produto 1">
           <h3 class="mt-1">Arranjo "Mini = 15cm"</h3>
-          <button class="btn btn-success rounded custom-bg active">veja mais</button>
+          <button class="btn btn-success rounded custom-bg active"
+          onclick="location.href='https://api.whatsapp.com/send?phone=5511999279294&text=Olá! Gostaria de saber mais sobre o produto: Arranjo Mini = 15cm'">veja 
+          mais</button>
         </div>
       </div>
       <div class="col-sm-3 mt-3">
         <div class="card text-center">
           <img src="/public/card3.png" alt="Produto 2">
           <h3 class="mt-1">Arranjo "P = 30cm"</h3>
-          <button class="btn btn-success rounded custom-bg active">veja mais</button>
+          <button class="btn btn-success rounded custom-bg active"
+          onclick="location.href='https://api.whatsapp.com/send?phone=5511999279294&text=Olá! Gostaria de saber mais sobre o produto: Arranjo P = 30cm'">veja 
+          mais</button>
         </div>
       </div>
       <div class="col-sm-3 mt-3">
         <div class="card text-center">
           <img src="/public/card5.png" alt="Produto 3">
           <h3 class="mt-1">Arranjo "M = 45cm"</h3>
-          <button class="btn btn-success rounded custom-bg active">veja mais</button>
+          <button class="btn btn-success rounded custom-bg active"
+          onclick="location.href='https://api.whatsapp.com/send?phone=5511999279294&text=Olá! Gostaria de saber mais sobre o produto: Arranjo M = 45cm'">veja 
+          mais</button>
         </div>
       </div>
       <div class="col-sm-3 mt-3">
@@ -168,6 +220,10 @@
         <!-- Instagram -->
         <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://instagram.com/sucullentaria"
           role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+          <!-- Whatsapp -->
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="https://wa.me/c/5511999279294"
+          role="button" data-mdb-ripple-color="dark"><i class="fab fa-whatsapp"></i></a>
       </section>
       <!-- Section: Social media -->
     </div>
